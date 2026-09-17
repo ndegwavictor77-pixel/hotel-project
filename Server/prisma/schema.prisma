@@ -141,7 +141,7 @@ model Reservation {
 
   //relation
   guestId Int
-  guest   Guest @relation(fields: [guestId], references: [id])
+  guest   Guest @relation(fields: [guestId], references: [id], onDelete: Cascade)
 
   roomId Int
   room   Room @relation(fields: [roomId], references: [id])
@@ -161,7 +161,7 @@ model Payment {
   paidAt          DateTime?
 
   reservationId Int
-  reservation   Reservation @relation(fields: [reservationId], references: [id])
+  reservation   Reservation @relation(fields: [reservationId], references: [id], onDelete: Cascade)
 }
 
 model Service {
@@ -179,7 +179,7 @@ model GuestService {
   totalPrice Float
 
   reservationId Int
-  reservation   Reservation @relation(fields: [reservationId], references: [id])
+  reservation   Reservation @relation(fields: [reservationId], references: [id], onDelete: Cascade)
 
   serviceId Int
   service   Service @relation(fields: [serviceId], references: [id])
@@ -222,7 +222,7 @@ model InventoryTransaction {
   createdAt DateTime @default(now())
 
   inventoryId Int
-  inventory   Inventory @relation(fields: [inventoryId], references: [id])
+  inventory   Inventory @relation(fields: [inventoryId], references: [id], onDelete: Cascade)
 }
 
 model AuditLog {

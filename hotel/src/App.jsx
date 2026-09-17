@@ -12,7 +12,8 @@ import Employee from "./pages/Employee";
 import Reservation from "./pages/Reservation";
 import Room from "./pages/Room";
 import Roomtype from "./pages/Roomtype";
-import Payment from "./pages/Payment";                                                      
+import Payment from "./pages/Payment"; 
+import Housekeeping from "./pages/Housekeeping";                                                     
 import Home from "./pages/Home";
 
 
@@ -32,6 +33,8 @@ function App(){
                 <Route path="/room" element={<Room/>}/>
                  <Route path="/roomtype" element={<Roomtype/>}/>
                  <Route path="/payment" element={<Payment/>}/>
+                 <Route path="/housekeeping" element={<Housekeeping/>}/>
+
                
             </Routes>
 
